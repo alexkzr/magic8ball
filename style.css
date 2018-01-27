@@ -1,22 +1,65 @@
 #wrapper {
   display: flex;
+  flex-direction: column;
 }
-
+body {
+  background: url(background.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  margin: 0 auto;
+  height: 100vh;
+}
+.lang {
+  display: inline;
+  margin: auto;
+}
+.eng:focus,
+.rus:focus {
+  box-shadow: 1px 1px 23px 14px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: 1px 1px 23px 14px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 1px 1px 23px 14px rgba(0, 0, 0, 0.5) inset;
+}
+.eng,
+.rus {
+  width: 40px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #a9f9a9;
+  line-height: 20px;
+  text-align: center;
+  color: #000;
+  margin: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 7px;
+  display: inline-block;
+  border-bottom: 2px solid #559e54;
+  border-right: 2px solid #559e54;
+  box-shadow: 12px 15px 23px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 12px 15px 23px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 12px 15px 23px -3px rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+.eng:hover,
+.rus:hover {
+  border-top: 2px solid #a9f9a9;
+  border-left: 2px solid #a9f9a9;
+  background-color: #559e54;
+  color: white;
+  padding: 5px;
+}
 .ball {
   width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background-color: black;
+  height: 480px;
+  background: url(ball.svg) no-repeat;
   display: flex;
-  box-shadow: 1px 1px 45px -2px rgba(110, 23, 201, 1);
-  -webkit-box-shadow: 1px 1px 45px -2px rgba(110, 23, 201, 1);
-  -moz-box-shadow: 1px 1px 45px -2px rgba(110, 23, 201, 1);
   z-index: 0;
+  margin: auto;
 }
 
 .answer {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   color: white;
   z-index: 2;
   margin: auto;
@@ -28,11 +71,35 @@
   border: 2px solid grey;
 }
 
-.text {
-  width: 200px;
-  height: 200px;
+.shadow {
+  width: 180px;
+  height: 180px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  line-height: 180px;
+  margin: auto;
+  word-wrap: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  width: 180px;
+  min-height: 10px;
+  color: #fff;
+  margin: inherit;
+}
+.clicked {
+  animation: jiggle 0.25s steps(1000) alternate;
+}
+@keyframes jiggle {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(80px);
+  }
 }
