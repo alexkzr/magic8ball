@@ -1,0 +1,19 @@
+{
+  "name": "8ball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askkozy/magic8ball.git"
+  },
+  "author": "AS Kozyrev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/askkozy/magic8ball/issues"
+  },
+  "homepage": "https://github.com/askkozy/magic8ball#readme"
+}
